@@ -1,0 +1,32 @@
+{
+  "name": "RelayDesk / evidence to outreach",
+  "goal": "Review three synthetic accounts and prepare one grounded email draft with a launch-readiness decision.",
+  "tasks": [
+    {
+      "id": "qualify-accounts",
+      "role": "account-analyst",
+      "outcome": "Qualify all three supplied accounts and identify one account worth further discovery.",
+      "evidence": ["company.md"],
+      "acceptance": ["Assess each account against the stated ICP", "Separate fit signals from unverified pain", "Cite company.md for every account fact"],
+      "limits": ["Use supplied synthetic data only", "No external lookups or enrichment", "No messages or spend"]
+    },
+    {
+      "id": "draft-email",
+      "role": "outreach-writer",
+      "outcome": "Prepare one discovery email for the highest-priority qualified account.",
+      "depends_on": ["qualify-accounts"],
+      "evidence": ["company.md"],
+      "acceptance": ["Use only documented product capabilities", "Phrase unknown pain as a question", "Include one clear invitation"],
+      "limits": ["Draft only", "No invented ROI, customer proof or email address", "Do not send"]
+    },
+    {
+      "id": "review-campaign",
+      "role": "campaign-reviewer",
+      "outcome": "Assess the approved account research and email draft; list blockers to any live pilot.",
+      "depends_on": ["qualify-accounts", "draft-email"],
+      "evidence": ["company.md"],
+      "acceptance": ["Check claim provenance and ICP fit", "List missing contact, suppression and sender checks", "State whether launch is ready and why"],
+      "limits": ["Review only", "No live launch or provider writes", "Do not report unobserved business results"]
+    }
+  ]
+}

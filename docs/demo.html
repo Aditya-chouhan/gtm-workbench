@@ -1,0 +1,65 @@
+<!doctype html><html lang="en"><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>GTM Workbench — RelayDesk / evidence to outreach</title><style>
+:root{color-scheme:dark;font-family:system-ui,sans-serif;background:#0b1017;color:#e5ecf5}
+body{max-width:1060px;margin:0 auto;padding:52px 24px}.eyebrow,.meta,small{color:#94a6bc}
+.eyebrow{letter-spacing:.16em;font-size:12px}h1{font-size:clamp(36px,7vw,64px);letter-spacing:-.05em;margin:20px 0}
+header p{max-width:720px;line-height:1.7}.stats{display:flex;gap:24px;flex-wrap:wrap;margin:28px 0}
+.notice{border-left:3px solid #f5c979;padding:12px 16px;background:#1c2330;color:#f5d69e}
+.stats strong{color:#8be3c6}main{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,440px),1fr));gap:18px}
+article{background:#121c28;border:1px solid #29394c;border-radius:16px;padding:24px;min-width:0}
+h2{font-size:22px}article p{color:#b7c7da;line-height:1.6}.approved{color:#8be3c6}.review{color:#f5c979}
+.stale,.blocked,.failed{color:#ff9a9a}summary{cursor:pointer;color:#9bbcff;padding:12px 0}
+pre{white-space:pre-wrap;overflow-wrap:anywhere;line-height:1.6;background:#0b121b;padding:16px;border-radius:8px;font-size:13px}
+small{display:block;overflow-wrap:anywhere;font-size:10px;margin-top:18px}footer{margin-top:32px;color:#94a6bc;font-size:13px}
+</style><header><div class="eyebrow">GTM WORKBENCH / LOCAL REVIEW REPORT</div>
+<h1>RelayDesk / evidence to outreach</h1><p>Review three synthetic accounts and prepare one grounded email draft with a launch-readiness decision.</p><p class="notice">SIMULATED DEMO · Prewritten artifacts and fixture approvals. No live campaign results.</p>
+<div class="stats"><span><strong>3</strong> tasks</span><span><strong>3</strong> approved</span>
+<span><strong>10</strong> audit events</span><span>No network execution</span></div></header>
+<main><article><div class="meta">account-analyst · <span class="approved">approved</span></div><h2>qualify-accounts</h2><p>Qualify all three supplied accounts and identify one account worth further discovery.</p><div class="meta">Requires: source evidence</div><p></p><details><summary>Inspect deliverable</summary><pre># Account review — synthetic fixture
+
+| Account | Fit | Evidence | Unknown |
+|---|---|---|---|
+| Cedar Stack | Priority discovery candidate | 42 employees; implementation manager hiring note, Oct 27 | Pain, buyer and tool stack |
+| Marble Apps | Plausible fit | 28 employees; implementation team noted Oct 20 | Pain, timing and current tools |
+| Birch Local | Exclude | 6 employees; consumer delivery | Outside stated company type and size |
+
+Source: company.md. Hiring indicates a relevant function, not buying intent.
+Recommendation: learn how Cedar Stack currently manages implementation handoffs.
+No contacts were sourced and no lookup was performed.
+</pre></details><small>Reviewer: DEMO / simulated reviewer</small><small>SHA-256: 09fd237e0e6971eaa83f74d993f7e557cf8bd2049ce5761c2e53973f0e0a83a7</small></article><article><div class="meta">outreach-writer · <span class="approved">approved</span></div><h2>draft-email</h2><p>Prepare one discovery email for the highest-priority qualified account.</p><div class="meta">Requires: qualify-accounts</div><p></p><details><summary>Inspect deliverable</summary><pre># Discovery email — synthetic fixture, unsent
+
+Account: Cedar Stack. Recipient: not identified.
+Subject: implementation handoffs
+
+Hi [verified first name],
+
+I saw your team is hiring an implementation manager. How do you track who owns
+each customer handoff today?
+
+RelayDesk imports implementation tasks from a CSV into a shared board with
+owners and due dates. Would a 20-minute review of one handoff workflow be useful?
+
+Adi
+
+Evidence: company.md; task:qualify-accounts. Personalization requires verifying
+the supplied hiring note and selecting the right contact before any use.
+No customer outcomes or unsupported integrations are claimed.
+</pre></details><small>Reviewer: DEMO / simulated reviewer</small><small>SHA-256: 004ba710c2770ae709464f1b0fe3b3abfe33f85b87bd46555b823606a6d08504</small></article><article><div class="meta">campaign-reviewer · <span class="approved">approved</span></div><h2>review-campaign</h2><p>Assess the approved account research and email draft; list blockers to any live pilot.</p><div class="meta">Requires: qualify-accounts, draft-email</div><p></p><details><summary>Inspect deliverable</summary><pre># Campaign review — synthetic fixture
+
+Decision: NOT READY TO LAUNCH.
+
+The draft matches documented capabilities and asks about unknown pain.
+Account prioritization is supported by supplied ICP facts, not proven intent.
+Sources: company.md; task:qualify-accounts; task:draft-email.
+
+Blockers: verify source freshness, identify the buyer, obtain a valid business
+contact through an authorized source, check suppression/opt-out handling,
+inspect sender readiness and approve final audience, copy, schedule and limits.
+This local toolkit does not implement or verify those provider operations.
+
+Suggested experiment (hypothesis only): human review of five verified accounts
+before deciding whether a discovery pilot is worth running. Choose success and
+stopping criteria with the owner before any send. No campaign results exist.
+</pre></details><small>Reviewer: DEMO / simulated reviewer</small><small>SHA-256: 9a9d7c1bb07dc4488a171b5616254711eb100abe499d615e7da2f165d061c519</small></article></main><footer>Built by Aditya Chouhan · Generated 2026-10-29T15:25:26.035250+00:00<br>
+Local workflow state. Approval records are self-reported; this report does not prove business results or human identity.</footer></html>

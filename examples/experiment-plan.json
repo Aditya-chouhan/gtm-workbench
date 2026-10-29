@@ -1,0 +1,42 @@
+{
+  "name": "RelayDesk / experiment readout",
+  "goal": "Review fictional pilot observations without attributing causal effects.",
+  "tasks": [
+    {
+      "id": "analyze-pilot",
+      "role": "experiment-analyst",
+      "outcome": "Assess observations against the supplied decision rule.",
+      "acceptance": [
+        "Report denominators and the full window",
+        "Do not claim statistical or causal improvement",
+        "Identify one next decision and its limitation"
+      ],
+      "limits": [
+        "Use supplied evidence only",
+        "Draft or analysis only; no external writes or spend"
+      ],
+      "evidence": [
+        "experiment.md"
+      ]
+    },
+    {
+      "id": "review-readout",
+      "role": "coordinator",
+      "outcome": "Review the readout and propose a bounded next task.",
+      "acceptance": [
+        "Distinguish fixture data from real results",
+        "Keep action consistent with the predeclared rule"
+      ],
+      "limits": [
+        "Use supplied evidence only",
+        "Draft or analysis only; no external writes or spend"
+      ],
+      "depends_on": [
+        "analyze-pilot"
+      ],
+      "evidence": [
+        "experiment.md"
+      ]
+    }
+  ]
+}

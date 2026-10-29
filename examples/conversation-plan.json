@@ -1,0 +1,43 @@
+{
+  "name": "RelayDesk / conversation review",
+  "goal": "Triage a supplied synthetic thread and draft the next response.",
+  "tasks": [
+    {
+      "id": "triage-thread",
+      "role": "conversation-analyst",
+      "outcome": "Classify the thread and draft one context-specific response.",
+      "acceptance": [
+        "Cite the buyer question and prior commitment",
+        "Preserve the explicit requested timing"
+      ],
+      "limits": [
+        "Use supplied evidence only",
+        "Draft or analysis only; no external writes or spend"
+      ],
+      "evidence": [
+        "company.md",
+        "conversation.md"
+      ]
+    },
+    {
+      "id": "review-response",
+      "role": "campaign-reviewer",
+      "outcome": "Check the proposed response against the thread and product facts.",
+      "acceptance": [
+        "No unsupported integration claim",
+        "No sending or scheduling implied"
+      ],
+      "limits": [
+        "Use supplied evidence only",
+        "Draft or analysis only; no external writes or spend"
+      ],
+      "depends_on": [
+        "triage-thread"
+      ],
+      "evidence": [
+        "company.md",
+        "conversation.md"
+      ]
+    }
+  ]
+}

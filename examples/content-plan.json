@@ -1,0 +1,60 @@
+{
+  "name": "RelayDesk / content preparation",
+  "goal": "Prepare evidence-grounded content about implementation ownership.",
+  "tasks": [
+    {
+      "id": "editorial-brief",
+      "role": "content-editor",
+      "outcome": "Write a LinkedIn content brief addressing implementation ownership.",
+      "acceptance": [
+        "Name the audience and one supported thesis",
+        "Distinguish example from personal experience"
+      ],
+      "limits": [
+        "Use supplied evidence only",
+        "Draft or analysis only; no external writes or spend"
+      ],
+      "evidence": [
+        "company.md"
+      ]
+    },
+    {
+      "id": "draft-content",
+      "role": "content-producer",
+      "outcome": "Write the post and an editable carousel brief.",
+      "acceptance": [
+        "Cite the approved thesis",
+        "Do not invent customer outcomes"
+      ],
+      "limits": [
+        "Use supplied evidence only",
+        "Draft or analysis only; no external writes or spend"
+      ],
+      "depends_on": [
+        "editorial-brief"
+      ],
+      "evidence": [
+        "company.md"
+      ]
+    },
+    {
+      "id": "review-content",
+      "role": "campaign-reviewer",
+      "outcome": "Review the draft for unsupported claims and publication blockers.",
+      "acceptance": [
+        "Inspect every product/proof claim",
+        "State what is still needed for publication"
+      ],
+      "limits": [
+        "Use supplied evidence only",
+        "Draft or analysis only; no external writes or spend"
+      ],
+      "depends_on": [
+        "draft-content"
+      ],
+      "evidence": [
+        "company.md"
+      ]
+    }
+  ]
+}
