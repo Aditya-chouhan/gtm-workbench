@@ -176,6 +176,33 @@ class WorkbenchTests(unittest.TestCase):
 
 
 class PlanTests(unittest.TestCase):
+    def test_walkthrough_records_dependency_unlock_and_stale_rejection(self):
+        root = Path(__file__).resolve().parents[1]
+        with tempfile.TemporaryDirectory() as tmp:
+            out = Path(tmp) / "recording"
+            result = subprocess.run([sys.executable, str(root / "examples/walkthrough.py"),
+                                     "--output", str(out)], capture_output=True, text=True)
+            self.assertEqual(result.returncode, 0, result.stderr)
+            scenes = json.loads((out / "scenes.json").read_text())
+            self.assertEqual(len(scenes), 6)
+            self.assertEqual(scenes[0]["tasks"][1]["status"], "blocked")
+            self.assertEqual(scenes[2]["tasks"][1]["status"], "ready")
+            self.assertEqual([t["status"] for t in scenes[4]["tasks"]], ["stale"] * 3)
+            self.assertIn("task is stale", scenes[5]["detail"])
+
+    def test_public_source_case_replays_local_review(self):
+        root = Path(__file__).resolve().parents[1]
+        with tempfile.TemporaryDirectory() as tmp:
+            out = Path(tmp) / "public-case"
+            result = subprocess.run([sys.executable, str(root / "examples/public-case/run.py"),
+                                     "--output", str(out)], capture_output=True, text=True)
+            self.assertEqual(result.returncode, 0, result.stderr)
+            ws = Workspace(out)
+            self.assertEqual([t["status"] for t in ws.tasks()], ["approved"] * 3)
+            self.assertTrue(all(t["reviewer"] == "Codex / technical self-review" for t in ws.tasks()))
+            self.assertEqual((out / "public-sources.md").read_bytes(),
+                             (root / "examples/public-case/public-sources.md").read_bytes())
+
     def test_all_shipped_plans_validate(self):
         examples = Path(__file__).resolve().parents[1] / "examples"
         for source in examples.glob("*-plan.json"):

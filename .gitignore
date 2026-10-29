@@ -6,6 +6,8 @@ build/
 dist/
 .workbench/
 demo-output/
+walkthrough-output/
+public-case-output/
 .env
 .env.*
 .DS_Store

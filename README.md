@@ -1,5 +1,7 @@
 # GTM Workbench
 
+[![Tests](https://github.com/Aditya-chouhan/gtm-workbench/actions/workflows/test.yml/badge.svg)](https://github.com/Aditya-chouhan/gtm-workbench/actions/workflows/test.yml)
+
 **An evidence-grounded workflow ledger for GTM agent teams.**
 
 Built by **Aditya Chouhan**. Python 3.9+ · MIT · zero runtime dependencies.
@@ -18,8 +20,6 @@ python3 examples/demo.py --output demo-output
 python3 -m gtm_workbench -w demo-output status
 ```
 
-The clone URL above is the intended publication location; until this repository
-is published, download/copy the source and run the final two commands from its root.
 Open `demo-output/report.html` in a browser. It contains three inspectable fixture
 deliverables: account qualification, an email draft, and a readiness review.
 The demo uses **synthetic data, prewritten artifacts and simulated approvals**.
@@ -31,6 +31,35 @@ It makes no model calls, spends nothing and sends nothing.
 
 The [included demo report](docs/demo.html) is a standalone HTML file you can open
 locally. It labels fixture approvals explicitly and lets you inspect each artifact.
+
+## Watch the workflow
+
+![72-second CLI walkthrough using actual outputs and fixture data](docs/walkthrough.gif)
+
+[Download the 72-second MP4 walkthrough](docs/walkthrough.mp4) ·
+[Terminal recording](docs/walkthrough.cast)
+
+The recording shows research approval unlocking drafting, followed by an evidence
+change making all dependent reviews stale. Frames are rendered from actual CLI
+outputs. Business data and reviewer approvals are simulated; there are no model
+calls or messages. Reproduce the recording data with:
+
+```bash
+python3 examples/walkthrough.py --output walkthrough-output
+```
+
+## Public-source case study
+
+The [PostHog assessment](docs/public-case.html) runs the same review workflow on
+real public company documentation. It preserves unknown pain and buying intent,
+produces an unsent discovery draft, and identifies what remains unverified.
+Source notes, manually authored artifacts and the replay script are in
+[`examples/public-case/`](examples/public-case/). This demonstrates research-to-review
+mechanics; it does not claim a customer relationship or commercial results.
+
+```bash
+python3 examples/public-case/run.py --output public-case-output
+```
 
 ## What works today
 
@@ -95,7 +124,8 @@ symlink resolution. Deliverables are stored as snapshots in the ledger.
 
 Additional plans in `examples/` cover content preparation, conversation triage
 and experiment readouts. Copy each plan's declared evidence files into its workspace
-before starting. All included business data is fictional.
+before starting. The RelayDesk examples are fictional; the public-source case
+study is separately labeled and links its real sources.
 
 ## The team
 

@@ -1,0 +1,74 @@
+<!doctype html><html lang="en"><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>GTM Workbench — PostHog / public-source discovery assessment</title><style>
+:root{color-scheme:dark;font-family:system-ui,sans-serif;background:#0b1017;color:#e5ecf5}
+body{max-width:1060px;margin:0 auto;padding:52px 24px}.eyebrow,.meta,small{color:#94a6bc}
+.eyebrow{letter-spacing:.16em;font-size:12px}h1{font-size:clamp(36px,7vw,64px);letter-spacing:-.05em;margin:20px 0}
+header p{max-width:720px;line-height:1.7}.stats{display:flex;gap:24px;flex-wrap:wrap;margin:28px 0}
+.notice{border-left:3px solid #f5c979;padding:12px 16px;background:#1c2330;color:#f5d69e}
+.stats strong{color:#8be3c6}main{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,440px),1fr));gap:18px}
+article{background:#121c28;border:1px solid #29394c;border-radius:16px;padding:24px;min-width:0}
+h2{font-size:22px}article p{color:#b7c7da;line-height:1.6}.approved{color:#8be3c6}.review{color:#f5c979}
+.stale,.blocked,.failed{color:#ff9a9a}summary{cursor:pointer;color:#9bbcff;padding:12px 0}
+pre{white-space:pre-wrap;overflow-wrap:anywhere;line-height:1.6;background:#0b121b;padding:16px;border-radius:8px;font-size:13px}
+small{display:block;overflow-wrap:anywhere;font-size:10px;margin-top:18px}footer{margin-top:32px;color:#94a6bc;font-size:13px}
+</style><header><div class="eyebrow">GTM WORKBENCH / LOCAL REVIEW REPORT</div>
+<h1>PostHog / public-source discovery assessment</h1><p>Assess a real company&#x27;s public context without inferring buying intent. Manually authored work and Codex technical self-review; nothing sent.</p>
+<div class="stats"><span><strong>3</strong> tasks</span><span><strong>3</strong> approved</span>
+<span><strong>10</strong> audit events</span><span>No network execution</span></div></header>
+<main><article><div class="meta">account-analyst · <span class="approved">approved</span></div><h2>assess-account</h2><p>Assess public fit evidence and unknowns</p><div class="meta">Requires: source evidence</div><p></p><details><summary>Inspect deliverable</summary><pre># Potential-adopter assessment
+
+**Decision: plausible discovery audience; commercial qualification unknown.**
+
+The public handbook shows several marketing disciplines and existing use of
+agentic summaries (S1 in public-sources.md). That creates a reasonable question
+about how evidence travels between drafts and reviewers. It does not establish
+that their current process fails or that Workbench would improve it.
+
+Technical familiarity is an adoption hypothesis. An existing workflow may already
+solve the problem. Ask how changed source facts reach people reviewing dependent
+content before proposing a replacement. Budget, owner and urgency are unknown.
+
+Evidence: public-sources.md; product.md. No contact lookup or paid research occurred.
+</pre></details><small>Reviewer: Codex / technical self-review</small><small>SHA-256: 1584cb0f07860a6ae1c2cf9b84d76b18db737b32f6cbc7cb7ed68b040a5c3221</small></article><article><div class="meta">outreach-writer · <span class="approved">approved</span></div><h2>draft-discovery</h2><p>Draft a grounded discovery question</p><div class="meta">Requires: assess-account</div><p></p><details><summary>Inspect deliverable</summary><pre># Unsent discovery draft
+
+Audience: an appropriate marketing operations owner, not yet identified.
+Recipient and address: not researched.
+
+Subject: reviewing drafts when source facts change
+
+Hi [verified first name],
+
+Your public handbook describes work across editorial, design and product docs.
+When a source fact changes, how does that reach whoever reviews a dependent draft?
+
+I built GTM Workbench, a local open-source toolkit that tracks task dependencies
+and flags stale reviews when their inputs change. Would a short technical example
+be useful, or is this already covered by your current workflow?
+
+Adi
+
+Grounding: public-sources.md (S1); product.md; task:assess-account.
+This draft makes no claim about their pain, tooling gaps, results or budget.
+Nothing was sent; verify context and choose a suitable recipient before any use.
+</pre></details><small>Reviewer: Codex / technical self-review</small><small>SHA-256: da1ea0c711cf411ba3db14be76e0590e19095258d124eb0e1dcb60aa526f9618</small></article><article><div class="meta">campaign-reviewer · <span class="approved">approved</span></div><h2>review-case</h2><p>Check claims and external-action blockers</p><div class="meta">Requires: assess-account, draft-discovery</div><p></p><details><summary>Inspect deliverable</summary><pre># Technical review
+
+**Artifact review: accepted. External send readiness: blocked.**
+
+The draft ties its opening to a documented public context and asks about unknown
+pain. Its Workbench capabilities match product.md and the tested implementation.
+It avoids conversion claims and does not imply a relationship with PostHog.
+
+Missing: verified recipient, current relevance, source freshness check before
+contact, channel/suppression requirements, and approval of final external copy.
+Approval of this local review is not permission to send.
+
+Sources: public-sources.md; product.md; task:assess-account; task:draft-discovery.
+
+What worked: uncertainty remains visible through research, drafting and review;
+downstream tasks receive approved upstream artifacts.
+Limitations: two public pages cannot validate pain or ROI. Source selection and
+semantic review were done manually by Codex. The CLI did not discover sources,
+generate the analysis, or validate business claims automatically.
+</pre></details><small>Reviewer: Codex / technical self-review</small><small>SHA-256: ff8745b944077fe2c340f27606a0630368a248b6c28c926a8f5b969c3277ad5f</small></article></main><footer>Built by Aditya Chouhan · Generated 2026-10-29T15:38:45.707993+00:00<br>
+Local workflow state. Approval records are self-reported; this report does not prove business results or human identity.</footer></html>
